@@ -15,6 +15,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/message")
 public class MessageResource {
+
     @Autowired
     private MessageInterface messageInterface;
 
