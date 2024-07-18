@@ -23,7 +23,7 @@ public class MessageResource {
     public ResponseEntity sendSqs(@RequestBody MyMessage message) {
         Boolean messageSend = messageInterface.sendSqs(message);
         Map<String, String> response = new HashMap<>();
-        if (messageSend){
+        if (messageSend) {
             response.put("message", "Mensagem SQS enviada com sucesso.");
             return ResponseEntity.status(201).body(response);
         }
@@ -35,7 +35,7 @@ public class MessageResource {
     public ResponseEntity sendSns(@RequestBody MyMessage message) {
         Boolean messageSend = messageInterface.sendSns(message);
         Map<String, String> response = new HashMap<>();
-        if (messageSend){
+        if (messageSend) {
             response.put("message", "Mensagem SNS enviada com sucesso.");
             return ResponseEntity.status(201).body(response);
         }
