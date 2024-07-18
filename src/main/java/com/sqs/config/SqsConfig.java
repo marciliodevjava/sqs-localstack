@@ -9,7 +9,6 @@ import java.net.URI;
 
 @Configuration
 public class SqsConfig {
-
     @Bean
     public SqsAsyncClient sqsAsyncClient() {
         return SqsAsyncClient.builder()
