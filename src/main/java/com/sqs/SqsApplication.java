@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-@PropertySource("classpath:sqs/sqs.properties")
+@PropertySource("classpath:message/sqs.properties")
 public class SqsApplication implements CommandLineRunner {
 
     @Autowired
