@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 @PropertySource("classpath:message/sqs.properties")
-public class MyConsumer {
+public class SqsConsumer {
 
-    @SqsListener("${SQS.0001}")
+    @SqsListener("${SQS.S.0001}")
     public void listen(MyMessage message) {
         System.out.println("Message received: " + message.content());
     }
