@@ -1,0 +1,14 @@
+$ awslocal --region sa-east-1 sqs create-queue --queue-name minha-fila
+aws --region sa-east-1 --endpoint-url=http://localhost:4566 sqs create-queue --queue-name minha-fila
+
+$ awslocal --region sa-east-1 --endpoint-url=http://localhost:4566 sns create-topic --name minha-fila
+
+$ aws --region sa-east-1 sns subscribe --topic-arn "arn:aws:sns:sa-east-1:000000000000:minha-fila"
+    --protocol sqs \
+    --notification-endpoint "arn:aws:sqs:sa-east-1:000000000000:minha-fila" \
+    --attributes "{\"RawMessageDelivery\": \"true"}"
+
+$ awslocal --region sa-east-1 set-subscription \
+      --subscription-arn "arn:aws:sns:sa-east-1:000000000000:minha-fila:8f0cbf7f-adae-4cdb-8fa4-a96ba257460e" \
+      --attributes-name RawMessageDelivery \
+      --attribute-value "true"
