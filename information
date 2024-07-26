@@ -1,6 +1,6 @@
 Criar um tópico SNS:
 
-aws --endpoint-url=http://localhost:4566 sns create-topic --name my-sns-topic
+aws --region sa-east-1 --endpoint-url=http://localhost:4566 sns create-topic --name my-sns-topic
 
 aws --region sa-east-1 --endpoint-url=http://localhost:4546 sns subscribe --topic-arn arn:aws:sns:sa-east-1:000000000000:sqs-information-application --protocol sqs --notification-endpoint arn:aws:sqs:
 sa-east-1:000000000000:sqs-information-application
@@ -34,6 +34,8 @@ awslocal sqs list-queues
 
 Lista as SNS:
 awslocal sns list-topics
+
+
 
 
 
