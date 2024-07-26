@@ -49,7 +49,11 @@
 		<dependency>
 			<groupId>io.awspring.cloud</groupId>
 			<artifactId>spring-cloud-aws-starter-sns</artifactId>
-			<version>3.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-sns</artifactId>
+			<version>1.12.443</version> <!-- Verifique a versão mais recente -->
 		</dependency>
 	</dependencies>
 
